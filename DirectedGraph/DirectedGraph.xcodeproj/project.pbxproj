@@ -15,16 +15,6 @@
 		33F26A9219A182D400268CD2 /* DirectedGraph.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 33F26A9119A182D400268CD2 /* DirectedGraph.1 */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		3372739419A3168D00E2E677 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 33F26A8419A182D400268CD2 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 33F26A8B19A182D400268CD2;
-			remoteInfo = DirectedGraph;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
 		33F26A8A19A182D400268CD2 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -51,7 +41,6 @@
 		3372737819A2FDF600E2E677 /* DirectedAuxiliary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectedAuxiliary.h; sourceTree = "<group>"; };
 		3372737919A2FE4800E2E677 /* DirectedAuxiliary.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DirectedAuxiliary.cpp; sourceTree = "<group>"; };
 		3372737B19A2FF9900E2E677 /* DirectedFindPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectedFindPath.h; sourceTree = "<group>"; };
-		3372738719A3168C00E2E677 /* DirectedGraph Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DirectedGraph Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3372739919A33F8D00E2E677 /* DirectedSearchGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectedSearchGraph.h; sourceTree = "<group>"; };
 		33F26A8C19A182D400268CD2 /* DirectedGraph */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DirectedGraph; sourceTree = BUILT_PRODUCTS_DIR; };
 		33F26A8F19A182D400268CD2 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
@@ -59,13 +48,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3372738419A3168C00E2E677 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		33F26A8919A182D400268CD2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -88,7 +70,6 @@
 			isa = PBXGroup;
 			children = (
 				33F26A8C19A182D400268CD2 /* DirectedGraph */,
-				3372738719A3168C00E2E677 /* DirectedGraph Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -118,24 +99,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3372738619A3168C00E2E677 /* DirectedGraph Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3372739819A3168D00E2E677 /* Build configuration list for PBXNativeTarget "DirectedGraph Tests" */;
-			buildPhases = (
-				3372738319A3168C00E2E677 /* Sources */,
-				3372738419A3168C00E2E677 /* Frameworks */,
-				3372738519A3168C00E2E677 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				3372739519A3168D00E2E677 /* PBXTargetDependency */,
-			);
-			name = "DirectedGraph Tests";
-			productName = "DirectedGraph Tests";
-			productReference = 3372738719A3168C00E2E677 /* DirectedGraph Tests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		33F26A8B19A182D400268CD2 /* DirectedGraph */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 33F26A9519A182D400268CD2 /* Build configuration list for PBXNativeTarget "DirectedGraph" */;
@@ -161,11 +124,6 @@
 			attributes = {
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "___FULLUSERNAME___";
-				TargetAttributes = {
-					3372738619A3168C00E2E677 = {
-						TestTargetID = 33F26A8B19A182D400268CD2;
-					};
-				};
 			};
 			buildConfigurationList = 33F26A8719A182D400268CD2 /* Build configuration list for PBXProject "DirectedGraph" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -180,29 +138,11 @@
 			projectRoot = "";
 			targets = (
 				33F26A8B19A182D400268CD2 /* DirectedGraph */,
-				3372738619A3168C00E2E677 /* DirectedGraph Tests */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXResourcesBuildPhase section */
-		3372738519A3168C00E2E677 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		3372738319A3168C00E2E677 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		33F26A8819A182D400268CD2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -217,49 +157,7 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		3372739519A3168D00E2E677 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 33F26A8B19A182D400268CD2 /* DirectedGraph */;
-			targetProxy = 3372739419A3168D00E2E677 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
-		3372739619A3168D00E2E677 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DirectedGraph Tests/DirectedGraph Tests-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "DirectedGraph Tests/DirectedGraph Tests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		3372739719A3168D00E2E677 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DirectedGraph Tests/DirectedGraph Tests-Prefix.pch";
-				INFOPLIST_FILE = "DirectedGraph Tests/DirectedGraph Tests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
 		33F26A9319A182D400268CD2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -347,15 +245,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3372739819A3168D00E2E677 /* Build configuration list for PBXNativeTarget "DirectedGraph Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3372739619A3168D00E2E677 /* Debug */,
-				3372739719A3168D00E2E677 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		33F26A8719A182D400268CD2 /* Build configuration list for PBXProject "DirectedGraph" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
