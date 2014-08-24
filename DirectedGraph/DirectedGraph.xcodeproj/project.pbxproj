@@ -7,48 +7,70 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3320BCF519A22ABF00E0AFFF /* DirectedCycle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3320BCF419A22ABF00E0AFFF /* DirectedCycle.cpp */; };
-		334CCBE919A6D75B0069057C /* SymbolDiGraph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 334CCBE819A6D75B0069057C /* SymbolDiGraph.cpp */; };
-		33630C9519A1868200E8E5BC /* DirectedGraph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33630C9419A1868200E8E5BC /* DirectedGraph.cpp */; };
-		3372737A19A2FE4800E2E677 /* DirectedAuxiliary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3372737919A2FE4800E2E677 /* DirectedAuxiliary.cpp */; };
-		33F26A9019A182D400268CD2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33F26A8F19A182D400268CD2 /* main.cpp */; };
-		33F26A9219A182D400268CD2 /* DirectedGraph.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 33F26A9119A182D400268CD2 /* DirectedGraph.1 */; };
+		3393493419A98459008FBE9D /* DirectedAuxiliary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3393492219A98459008FBE9D /* DirectedAuxiliary.cpp */; };
+		3393493519A98459008FBE9D /* DirectedCycle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3393492519A98459008FBE9D /* DirectedCycle.cpp */; };
+		3393493619A98459008FBE9D /* DirectedGraph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3393492A19A98459008FBE9D /* DirectedGraph.cpp */; };
+		3393493819A98459008FBE9D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3393492E19A98459008FBE9D /* main.cpp */; };
+		3393493919A98459008FBE9D /* SymbolDiGraph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3393493019A98459008FBE9D /* SymbolDiGraph.cpp */; };
+		3393493D19A984B1008FBE9D /* SymbolMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3393493219A98459008FBE9D /* SymbolMain.cpp */; };
+		3393493E19A984B1008FBE9D /* SymbolDiGraph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3393493019A98459008FBE9D /* SymbolDiGraph.cpp */; };
+		3393493F19A984B1008FBE9D /* DirectedGraph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3393492A19A98459008FBE9D /* DirectedGraph.cpp */; };
+		3393494019A984B1008FBE9D /* DirectedCycle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3393492519A98459008FBE9D /* DirectedCycle.cpp */; };
+		3393494219A984B1008FBE9D /* DirectedAuxiliary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3393492219A98459008FBE9D /* DirectedAuxiliary.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		33F26A8A19A182D400268CD2 /* CopyFiles */ = {
+		3393491419A98404008FBE9D /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
 			dstSubfolderSpec = 0;
 			files = (
-				33F26A9219A182D400268CD2 /* DirectedGraph.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		3393494419A984B1008FBE9D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3320BCF319A2298100E0AFFF /* DirectedCycle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectedCycle.h; sourceTree = "<group>"; };
-		3320BCF419A22ABF00E0AFFF /* DirectedCycle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DirectedCycle.cpp; sourceTree = "<group>"; };
-		3346917E19A70DFD00EA935A /* DirectedDepthFirstOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectedDepthFirstOrder.h; sourceTree = "<group>"; };
-		3346917F19A7331400EA935A /* StrongConnectedComponent.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = StrongConnectedComponent.h; sourceTree = "<group>"; };
-		334CCBE719A6D1D30069057C /* SymbolDiGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SymbolDiGraph.h; sourceTree = "<group>"; };
-		334CCBE819A6D75B0069057C /* SymbolDiGraph.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SymbolDiGraph.cpp; sourceTree = "<group>"; };
-		33630C9319A1835700E8E5BC /* DirectedGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectedGraph.h; sourceTree = "<group>"; };
-		33630C9419A1868200E8E5BC /* DirectedGraph.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DirectedGraph.cpp; sourceTree = "<group>"; };
-		33630CB319A1C4F900E8E5BC /* testsuit.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = testsuit.txt; sourceTree = "<group>"; };
-		3372737819A2FDF600E2E677 /* DirectedAuxiliary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectedAuxiliary.h; sourceTree = "<group>"; };
-		3372737919A2FE4800E2E677 /* DirectedAuxiliary.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DirectedAuxiliary.cpp; sourceTree = "<group>"; };
-		3372737B19A2FF9900E2E677 /* DirectedFindPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectedFindPath.h; sourceTree = "<group>"; };
-		3372739919A33F8D00E2E677 /* DirectedSearchGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectedSearchGraph.h; sourceTree = "<group>"; };
-		33F26A8C19A182D400268CD2 /* DirectedGraph */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DirectedGraph; sourceTree = BUILT_PRODUCTS_DIR; };
-		33F26A8F19A182D400268CD2 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		33F26A9119A182D400268CD2 /* DirectedGraph.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = DirectedGraph.1; sourceTree = "<group>"; };
+		3393491619A98404008FBE9D /* DirectedGraph */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DirectedGraph; sourceTree = BUILT_PRODUCTS_DIR; };
+		3393492219A98459008FBE9D /* DirectedAuxiliary.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DirectedAuxiliary.cpp; sourceTree = SOURCE_ROOT; };
+		3393492319A98459008FBE9D /* DirectedAuxiliary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectedAuxiliary.h; sourceTree = SOURCE_ROOT; };
+		3393492419A98459008FBE9D /* DirectedBreathFirstSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectedBreathFirstSearch.h; sourceTree = SOURCE_ROOT; };
+		3393492519A98459008FBE9D /* DirectedCycle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DirectedCycle.cpp; sourceTree = SOURCE_ROOT; };
+		3393492619A98459008FBE9D /* DirectedCycle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectedCycle.h; sourceTree = SOURCE_ROOT; };
+		3393492719A98459008FBE9D /* DirectedDepthFirstOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectedDepthFirstOrder.h; sourceTree = SOURCE_ROOT; };
+		3393492819A98459008FBE9D /* DirectedDepthFirstSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectedDepthFirstSearch.h; sourceTree = SOURCE_ROOT; };
+		3393492919A98459008FBE9D /* DirectedFindPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectedFindPath.h; sourceTree = SOURCE_ROOT; };
+		3393492A19A98459008FBE9D /* DirectedGraph.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DirectedGraph.cpp; sourceTree = SOURCE_ROOT; };
+		3393492B19A98459008FBE9D /* DirectedGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectedGraph.h; sourceTree = SOURCE_ROOT; };
+		3393492D19A98459008FBE9D /* DirectedSearchGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectedSearchGraph.h; sourceTree = SOURCE_ROOT; };
+		3393492E19A98459008FBE9D /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = SOURCE_ROOT; };
+		3393492F19A98459008FBE9D /* StrongConnectedComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StrongConnectedComponent.h; sourceTree = SOURCE_ROOT; };
+		3393493019A98459008FBE9D /* SymbolDiGraph.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SymbolDiGraph.cpp; sourceTree = SOURCE_ROOT; };
+		3393493119A98459008FBE9D /* SymbolDiGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SymbolDiGraph.h; sourceTree = SOURCE_ROOT; };
+		3393493219A98459008FBE9D /* SymbolMain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SymbolMain.cpp; sourceTree = SOURCE_ROOT; };
+		3393493319A98459008FBE9D /* testsuit.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = testsuit.txt; sourceTree = SOURCE_ROOT; };
+		3393494819A984B1008FBE9D /* DirectedGraph copy */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "DirectedGraph copy"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		33F26A8919A182D400268CD2 /* Frameworks */ = {
+		3393491319A98404008FBE9D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3393494319A984B1008FBE9D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -58,40 +80,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		33F26A8319A182D400268CD2 = {
+		3393490D19A98404008FBE9D = {
 			isa = PBXGroup;
 			children = (
-				33F26A8E19A182D400268CD2 /* DirectedGraph */,
-				33F26A8D19A182D400268CD2 /* Products */,
+				3393491819A98404008FBE9D /* DirectedGraph */,
+				3393491719A98404008FBE9D /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		33F26A8D19A182D400268CD2 /* Products */ = {
+		3393491719A98404008FBE9D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				33F26A8C19A182D400268CD2 /* DirectedGraph */,
+				3393491619A98404008FBE9D /* DirectedGraph */,
+				3393494819A984B1008FBE9D /* DirectedGraph copy */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		33F26A8E19A182D400268CD2 /* DirectedGraph */ = {
+		3393491819A98404008FBE9D /* DirectedGraph */ = {
 			isa = PBXGroup;
 			children = (
-				33F26A8F19A182D400268CD2 /* main.cpp */,
-				3372739919A33F8D00E2E677 /* DirectedSearchGraph.h */,
-				3372737B19A2FF9900E2E677 /* DirectedFindPath.h */,
-				3372737819A2FDF600E2E677 /* DirectedAuxiliary.h */,
-				3372737919A2FE4800E2E677 /* DirectedAuxiliary.cpp */,
-				33F26A9119A182D400268CD2 /* DirectedGraph.1 */,
-				33630C9319A1835700E8E5BC /* DirectedGraph.h */,
-				33630C9419A1868200E8E5BC /* DirectedGraph.cpp */,
-				33630CB319A1C4F900E8E5BC /* testsuit.txt */,
-				3320BCF319A2298100E0AFFF /* DirectedCycle.h */,
-				3320BCF419A22ABF00E0AFFF /* DirectedCycle.cpp */,
-				334CCBE719A6D1D30069057C /* SymbolDiGraph.h */,
-				334CCBE819A6D75B0069057C /* SymbolDiGraph.cpp */,
-				3346917E19A70DFD00EA935A /* DirectedDepthFirstOrder.h */,
-				3346917F19A7331400EA935A /* StrongConnectedComponent.h */,
+				3393492219A98459008FBE9D /* DirectedAuxiliary.cpp */,
+				3393492319A98459008FBE9D /* DirectedAuxiliary.h */,
+				3393492419A98459008FBE9D /* DirectedBreathFirstSearch.h */,
+				3393492519A98459008FBE9D /* DirectedCycle.cpp */,
+				3393492619A98459008FBE9D /* DirectedCycle.h */,
+				3393492719A98459008FBE9D /* DirectedDepthFirstOrder.h */,
+				3393492819A98459008FBE9D /* DirectedDepthFirstSearch.h */,
+				3393492919A98459008FBE9D /* DirectedFindPath.h */,
+				3393492A19A98459008FBE9D /* DirectedGraph.cpp */,
+				3393492B19A98459008FBE9D /* DirectedGraph.h */,
+				3393492D19A98459008FBE9D /* DirectedSearchGraph.h */,
+				3393492E19A98459008FBE9D /* main.cpp */,
+				3393492F19A98459008FBE9D /* StrongConnectedComponent.h */,
+				3393493019A98459008FBE9D /* SymbolDiGraph.cpp */,
+				3393493119A98459008FBE9D /* SymbolDiGraph.h */,
+				3393493219A98459008FBE9D /* SymbolMain.cpp */,
+				3393493319A98459008FBE9D /* testsuit.txt */,
 			);
 			path = DirectedGraph;
 			sourceTree = "<group>";
@@ -99,13 +124,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		33F26A8B19A182D400268CD2 /* DirectedGraph */ = {
+		3393491519A98404008FBE9D /* DirectedGraph */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 33F26A9519A182D400268CD2 /* Build configuration list for PBXNativeTarget "DirectedGraph" */;
+			buildConfigurationList = 3393491F19A98404008FBE9D /* Build configuration list for PBXNativeTarget "DirectedGraph" */;
 			buildPhases = (
-				33F26A8819A182D400268CD2 /* Sources */,
-				33F26A8919A182D400268CD2 /* Frameworks */,
-				33F26A8A19A182D400268CD2 /* CopyFiles */,
+				3393491219A98404008FBE9D /* Sources */,
+				3393491319A98404008FBE9D /* Frameworks */,
+				3393491419A98404008FBE9D /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -113,52 +138,82 @@
 			);
 			name = DirectedGraph;
 			productName = DirectedGraph;
-			productReference = 33F26A8C19A182D400268CD2 /* DirectedGraph */;
+			productReference = 3393491619A98404008FBE9D /* DirectedGraph */;
+			productType = "com.apple.product-type.tool";
+		};
+		3393493B19A984B1008FBE9D /* DirectedGraph copy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3393494519A984B1008FBE9D /* Build configuration list for PBXNativeTarget "DirectedGraph copy" */;
+			buildPhases = (
+				3393493C19A984B1008FBE9D /* Sources */,
+				3393494319A984B1008FBE9D /* Frameworks */,
+				3393494419A984B1008FBE9D /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "DirectedGraph copy";
+			productName = DirectedGraph;
+			productReference = 3393494819A984B1008FBE9D /* DirectedGraph copy */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		33F26A8419A182D400268CD2 /* Project object */ = {
+		3393490E19A98404008FBE9D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "___FULLUSERNAME___";
 			};
-			buildConfigurationList = 33F26A8719A182D400268CD2 /* Build configuration list for PBXProject "DirectedGraph" */;
+			buildConfigurationList = 3393491119A98404008FBE9D /* Build configuration list for PBXProject "DirectedGraph" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 33F26A8319A182D400268CD2;
-			productRefGroup = 33F26A8D19A182D400268CD2 /* Products */;
+			mainGroup = 3393490D19A98404008FBE9D;
+			productRefGroup = 3393491719A98404008FBE9D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				33F26A8B19A182D400268CD2 /* DirectedGraph */,
+				3393491519A98404008FBE9D /* DirectedGraph */,
+				3393493B19A984B1008FBE9D /* DirectedGraph copy */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		33F26A8819A182D400268CD2 /* Sources */ = {
+		3393491219A98404008FBE9D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				334CCBE919A6D75B0069057C /* SymbolDiGraph.cpp in Sources */,
-				3372737A19A2FE4800E2E677 /* DirectedAuxiliary.cpp in Sources */,
-				33630C9519A1868200E8E5BC /* DirectedGraph.cpp in Sources */,
-				3320BCF519A22ABF00E0AFFF /* DirectedCycle.cpp in Sources */,
-				33F26A9019A182D400268CD2 /* main.cpp in Sources */,
+				3393493919A98459008FBE9D /* SymbolDiGraph.cpp in Sources */,
+				3393493619A98459008FBE9D /* DirectedGraph.cpp in Sources */,
+				3393493519A98459008FBE9D /* DirectedCycle.cpp in Sources */,
+				3393493819A98459008FBE9D /* main.cpp in Sources */,
+				3393493419A98459008FBE9D /* DirectedAuxiliary.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3393493C19A984B1008FBE9D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3393493D19A984B1008FBE9D /* SymbolMain.cpp in Sources */,
+				3393493E19A984B1008FBE9D /* SymbolDiGraph.cpp in Sources */,
+				3393493F19A984B1008FBE9D /* DirectedGraph.cpp in Sources */,
+				3393494019A984B1008FBE9D /* DirectedCycle.cpp in Sources */,
+				3393494219A984B1008FBE9D /* DirectedAuxiliary.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		33F26A9319A182D400268CD2 /* Debug */ = {
+		3393491D19A98404008FBE9D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -196,7 +251,7 @@
 			};
 			name = Debug;
 		};
-		33F26A9419A182D400268CD2 /* Release */ = {
+		3393491E19A98404008FBE9D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -228,42 +283,65 @@
 			};
 			name = Release;
 		};
-		33F26A9619A182D400268CD2 /* Debug */ = {
+		3393492019A98404008FBE9D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		33F26A9719A182D400268CD2 /* Release */ = {
+		3393492119A98404008FBE9D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
+		3393494619A984B1008FBE9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "DirectedGraph copy";
+			};
+			name = Debug;
+		};
+		3393494719A984B1008FBE9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "DirectedGraph copy";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		33F26A8719A182D400268CD2 /* Build configuration list for PBXProject "DirectedGraph" */ = {
+		3393491119A98404008FBE9D /* Build configuration list for PBXProject "DirectedGraph" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				33F26A9319A182D400268CD2 /* Debug */,
-				33F26A9419A182D400268CD2 /* Release */,
+				3393491D19A98404008FBE9D /* Debug */,
+				3393491E19A98404008FBE9D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		33F26A9519A182D400268CD2 /* Build configuration list for PBXNativeTarget "DirectedGraph" */ = {
+		3393491F19A98404008FBE9D /* Build configuration list for PBXNativeTarget "DirectedGraph" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				33F26A9619A182D400268CD2 /* Debug */,
-				33F26A9719A182D400268CD2 /* Release */,
+				3393492019A98404008FBE9D /* Debug */,
+				3393492119A98404008FBE9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3393494519A984B1008FBE9D /* Build configuration list for PBXNativeTarget "DirectedGraph copy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3393494619A984B1008FBE9D /* Debug */,
+				3393494719A984B1008FBE9D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 33F26A8419A182D400268CD2 /* Project object */;
+	rootObject = 3393490E19A98404008FBE9D /* Project object */;
 }

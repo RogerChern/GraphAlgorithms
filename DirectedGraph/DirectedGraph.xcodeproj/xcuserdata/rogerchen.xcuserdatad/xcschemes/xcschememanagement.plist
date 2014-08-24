@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>DirectedGraph copy.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>DirectedGraph.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -12,12 +17,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>3372738619A3168C00E2E677</key>
+		<key>3393491519A98404008FBE9D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>33F26A8B19A182D400268CD2</key>
+		<key>3393493B19A984B1008FBE9D</key>
 		<dict>
 			<key>primary</key>
 			<true/>

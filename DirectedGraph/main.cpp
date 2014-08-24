@@ -12,7 +12,6 @@
 #include "DirectedFindPath.h"
 #include "DirectedSearchGraph.h"
 #include "DirectedAuxiliary.h"
-#include "SymbolDiGraph.h"
 #include "DirectedDepthFirstOrder.h"
 #include "StrongConnectedComponent.h"
 using namespace std;
@@ -58,9 +57,5 @@ int main(int argc, const char * argv[])
     cout << "Test for SCC\n";
     StrongConnectedComponent scc(dg);
     cout << scc.count() << endl;
-    
-    
-//    SymbolDiGraph sdg(argv[1], argv[2]);
-//    cout << sdg << endl;
 }
 

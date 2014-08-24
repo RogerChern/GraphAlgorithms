@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3393491519A98404008FBE9D"
-               BuildableName = "DirectedGraph"
-               BlueprintName = "DirectedGraph"
+               BlueprintIdentifier = "3393493B19A984B1008FBE9D"
+               BuildableName = "DirectedGraph copy"
+               BlueprintName = "DirectedGraph copy"
                ReferencedContainer = "container:DirectedGraph.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,9 +32,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3393491519A98404008FBE9D"
-            BuildableName = "DirectedGraph"
-            BlueprintName = "DirectedGraph"
+            BlueprintIdentifier = "3393493B19A984B1008FBE9D"
+            BuildableName = "DirectedGraph copy"
+            BlueprintName = "DirectedGraph copy"
             ReferencedContainer = "container:DirectedGraph.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -51,9 +51,9 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3393491519A98404008FBE9D"
-            BuildableName = "DirectedGraph"
-            BlueprintName = "DirectedGraph"
+            BlueprintIdentifier = "3393493B19A984B1008FBE9D"
+            BuildableName = "DirectedGraph copy"
+            BlueprintName = "DirectedGraph copy"
             ReferencedContainer = "container:DirectedGraph.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -69,9 +69,9 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3393491519A98404008FBE9D"
-            BuildableName = "DirectedGraph"
-            BlueprintName = "DirectedGraph"
+            BlueprintIdentifier = "3393493B19A984B1008FBE9D"
+            BuildableName = "DirectedGraph copy"
+            BlueprintName = "DirectedGraph copy"
             ReferencedContainer = "container:DirectedGraph.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
