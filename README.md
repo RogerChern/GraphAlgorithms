@@ -1,4 +1,4 @@
 GraphAlgorithms
 ===============
 
-C++ 11 impelemention of Graph Algorithms from Sedgewick's Algotirhms 4th
+C++ 11 implementataion of Graph Algorithms for Sedgewick's *Algotirhms 4th*
