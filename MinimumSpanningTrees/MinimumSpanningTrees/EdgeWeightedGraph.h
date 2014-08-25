@@ -28,6 +28,8 @@ public:
     {
         
     }
+    
+    Edge() = default;
 public:
     double weight() const
     {
@@ -54,13 +56,15 @@ public:
     }
     
     friend bool operator<(const Edge &lhs, const Edge &rhs);
+    friend bool operator>(const Edge &lhs, const Edge &rhs);
+    friend ostream & operator<<(ostream &out, const Edge &e);
 };
 
 class EdgeWeightedGraph{
 private:
-    vector<vector<Edge>>    adjList_;
-    size_t                  E_;
-    size_t                  V_;
+    vector<vector<Edge>>                   adjList_;
+    size_t                                 E_;
+    size_t                                 V_;
 public:
     void addEdge(Edge e)
     {
@@ -79,12 +83,12 @@ public:
         return E_;
     }
     
-    const vector<Edge> adj(size_t v) const
+    vector<Edge> adj(size_t v) const
     {
         return adjList_[v];
     }
     
-    const vector<Edge> edges() const
+    vector<Edge> edges() const
     {
         vector<Edge> ret;
         for(const auto &i : adjList_)
@@ -123,5 +127,7 @@ public:
     friend ostream & operator<<(ostream &, const EdgeWeightedGraph &);
 };
 bool operator<(const Edge &lhs, const Edge &rhs);
+bool operator>(const Edge &lhs, const Edge &rhs);
 ostream & operator<<(ostream &out, const EdgeWeightedGraph &ewg);
+ostream & operator<<(ostream &out, const Edge &e);
 #endif

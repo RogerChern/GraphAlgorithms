@@ -28,6 +28,7 @@
 		336CA1C419A9E84600BBB2BA /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		33BCFEC219AADBD600E3AE7F /* EdgeWeightedGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EdgeWeightedGraph.h; sourceTree = "<group>"; };
 		33BCFEC319AAE2C100E3AE7F /* EdgeWeightedGraph.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EdgeWeightedGraph.cpp; sourceTree = "<group>"; };
+		33F8CE0319AB565E00151181 /* LazyPrimMST.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LazyPrimMST.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +64,7 @@
 				336CA1C419A9E84600BBB2BA /* main.cpp */,
 				33BCFEC219AADBD600E3AE7F /* EdgeWeightedGraph.h */,
 				33BCFEC319AAE2C100E3AE7F /* EdgeWeightedGraph.cpp */,
+				33F8CE0319AB565E00151181 /* LazyPrimMST.h */,
 			);
 			path = MinimumSpanningTrees;
 			sourceTree = "<group>";

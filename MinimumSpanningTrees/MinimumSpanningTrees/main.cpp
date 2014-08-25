@@ -7,6 +7,7 @@
 //
 
 #include "EdgeWeightedGraph.h"
+#include "LazyPrimMST.h"
 #include <iostream>
 using namespace std;
 
@@ -14,6 +15,13 @@ int main(int argc, const char * argv[])
 {
     EdgeWeightedGraph ewg(cin);
     cout << ewg << endl;
+    
+    LazyPrimMST lpmst(ewg);
+    for(const auto &x : lpmst.edges())
+    {
+        cout << x << '\n';
+    }
+    cout << lpmst.weight() << endl;
     return 0;
 }
 
