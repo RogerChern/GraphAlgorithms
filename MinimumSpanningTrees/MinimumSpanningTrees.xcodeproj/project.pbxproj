@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		336CA1C519A9E84600BBB2BA /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 336CA1C419A9E84600BBB2BA /* main.cpp */; };
+		33BCFEC419AAE2C100E3AE7F /* EdgeWeightedGraph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33BCFEC319AAE2C100E3AE7F /* EdgeWeightedGraph.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,6 +27,7 @@
 		336CA1C119A9E84600BBB2BA /* MinimumSpanningTrees */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MinimumSpanningTrees; sourceTree = BUILT_PRODUCTS_DIR; };
 		336CA1C419A9E84600BBB2BA /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		33BCFEC219AADBD600E3AE7F /* EdgeWeightedGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EdgeWeightedGraph.h; sourceTree = "<group>"; };
+		33BCFEC319AAE2C100E3AE7F /* EdgeWeightedGraph.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EdgeWeightedGraph.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			children = (
 				336CA1C419A9E84600BBB2BA /* main.cpp */,
 				33BCFEC219AADBD600E3AE7F /* EdgeWeightedGraph.h */,
+				33BCFEC319AAE2C100E3AE7F /* EdgeWeightedGraph.cpp */,
 			);
 			path = MinimumSpanningTrees;
 			sourceTree = "<group>";
@@ -115,6 +118,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33BCFEC419AAE2C100E3AE7F /* EdgeWeightedGraph.cpp in Sources */,
 				336CA1C519A9E84600BBB2BA /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

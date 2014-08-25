@@ -115,6 +115,9 @@ public:
             addEdge(Edge(x, y, w));
         }
     }
+    
+    friend bool operator<(const Edge &lhs, const Edge &rhs);
 };
+bool operator<(const Edge &lhs, const Edge &rhs);
 
 #endif
