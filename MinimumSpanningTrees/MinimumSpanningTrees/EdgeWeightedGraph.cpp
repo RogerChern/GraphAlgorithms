@@ -12,3 +12,16 @@ bool operator<(const Edge &lhs, const Edge &rhs)
 {
     return lhs.weight() < rhs.weight();
 }
+
+ostream & operator<<(ostream &out, const EdgeWeightedGraph &ewg)
+{
+    for(auto i = 0; i < ewg.V_; ++i)
+    {
+        out << i << ": \n";
+        for(const auto &x : ewg.adjList_[i])
+        {
+            out << "    " << x.other(i) << ' ' << x.weight() << '\n';
+        }
+    }
+    return out;
+}

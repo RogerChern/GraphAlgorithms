@@ -52,6 +52,8 @@ public:
         else
             return -1;
     }
+    
+    friend bool operator<(const Edge &lhs, const Edge &rhs);
 };
 
 class EdgeWeightedGraph{
@@ -96,7 +98,8 @@ public:
     }
 public:
     EdgeWeightedGraph(size_t V):
-        V_(V)
+        V_(V),
+        adjList_(V)
     {
         
     }
@@ -116,8 +119,9 @@ public:
         }
     }
     
-    friend bool operator<(const Edge &lhs, const Edge &rhs);
+    
+    friend ostream & operator<<(ostream &, const EdgeWeightedGraph &);
 };
 bool operator<(const Edge &lhs, const Edge &rhs);
-
+ostream & operator<<(ostream &out, const EdgeWeightedGraph &ewg);
 #endif

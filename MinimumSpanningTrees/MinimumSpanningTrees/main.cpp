@@ -8,9 +8,12 @@
 
 #include "EdgeWeightedGraph.h"
 #include <iostream>
+using namespace std;
 
 int main(int argc, const char * argv[])
 {
+    EdgeWeightedGraph ewg(cin);
+    cout << ewg << endl;
     return 0;
 }
 
