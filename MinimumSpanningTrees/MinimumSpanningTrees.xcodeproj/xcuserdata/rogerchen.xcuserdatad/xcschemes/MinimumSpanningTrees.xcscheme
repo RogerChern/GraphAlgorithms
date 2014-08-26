@@ -32,9 +32,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "336CA1C019A9E84600BBB2BA"
-            BuildableName = "MinimumSpanningTrees"
-            BlueprintName = "MinimumSpanningTrees"
+            BlueprintIdentifier = "3335D39819AC454500427815"
+            BuildableName = "MinimumSpanningTrees copy"
+            BlueprintName = "MinimumSpanningTrees copy"
             ReferencedContainer = "container:MinimumSpanningTrees.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -51,9 +51,9 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "336CA1C019A9E84600BBB2BA"
-            BuildableName = "MinimumSpanningTrees"
-            BlueprintName = "MinimumSpanningTrees"
+            BlueprintIdentifier = "3335D39819AC454500427815"
+            BuildableName = "MinimumSpanningTrees copy"
+            BlueprintName = "MinimumSpanningTrees copy"
             ReferencedContainer = "container:MinimumSpanningTrees.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
