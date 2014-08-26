@@ -5,23 +5,19 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-<<<<<<< HEAD
-	<string>FB043A3C-B720-4DE7-835E-933A1CB3EFCA</string>
-=======
-	<string>AC90882F-BC0A-42EB-A630-8EC7DF7308F2</string>
->>>>>>> FETCH_HEAD
+	<string>3FBA2695-2FEF-43D6-8614-7C42D634F858</string>
 	<key>IDESourceControlProjectName</key>
 	<string>MinimumSpanningTrees</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>9FF51862-1452-434B-A94C-EC31BB1B61CE</key>
+		<key>D53ACEA5-A738-41FF-9D83-62D731BB5F9E</key>
 		<string>https://github.com/RogerChern/GraphAlgorithms.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>MinimumSpanningTrees/MinimumSpanningTrees.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>9FF51862-1452-434B-A94C-EC31BB1B61CE</key>
+		<key>D53ACEA5-A738-41FF-9D83-62D731BB5F9E</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -29,14 +25,14 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>9FF51862-1452-434B-A94C-EC31BB1B61CE</string>
+	<string>D53ACEA5-A738-41FF-9D83-62D731BB5F9E</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>9FF51862-1452-434B-A94C-EC31BB1B61CE</string>
+			<string>D53ACEA5-A738-41FF-9D83-62D731BB5F9E</string>
 			<key>IDESourceControlWCCName</key>
 			<string>GraphAlgorithms</string>
 		</dict>
