@@ -5,7 +5,11 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
+<<<<<<< HEAD
 	<string>FB043A3C-B720-4DE7-835E-933A1CB3EFCA</string>
+=======
+	<string>AC90882F-BC0A-42EB-A630-8EC7DF7308F2</string>
+>>>>>>> FETCH_HEAD
 	<key>IDESourceControlProjectName</key>
 	<string>MinimumSpanningTrees</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>

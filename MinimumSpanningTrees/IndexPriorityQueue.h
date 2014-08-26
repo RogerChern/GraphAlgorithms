@@ -21,6 +21,7 @@ class IndexPriorityQueue{
 private:
     vector<Item>                    heap_;
     size_t                          heapSize_;
+<<<<<<< HEAD
     vector<size_t>                  pq_;
     vector<size_t>                  qp_;
 private:
@@ -53,6 +54,22 @@ private:
             {
                 swap(heap_[lcld], heap_[index]);
                 index = lcld;
+=======
+private:
+    void sink(size_t v)
+    {
+        while(v < heapSize_ / 2)
+        {
+            auto w = 2 * v + 1;
+            if(w < heapSize_ - 1 && cmp()(heap_[w+1], heap_[w]))
+            {
+                ++w;
+            }
+            if(cmp()(heap_[w], heap_[v]))
+            {
+                swap(heap_[w], heap_[v]);
+                v = w;
+>>>>>>> FETCH_HEAD
             }
             else
             {
@@ -60,6 +77,7 @@ private:
             }
         }
     }
+<<<<<<< HEAD
         
     void   swim(size_t v)
     {
@@ -83,6 +101,18 @@ public: //for test only     should be undocumented
         return is_heap(heap_.begin(), heap_.end(), greater<Item>());
     }
     
+=======
+    
+    void swim(size_t v)
+    {
+        while(v > 0 && (cmp()(v, (v - 1) / 2) + 1))
+        {
+                swap(heap_[v], heap_[(v - 1) / 2 + 1]);
+                v = (v - 1) / 2 + 1;
+        }
+    }
+    
+>>>>>>> FETCH_HEAD
 public:
     bool test() const
     {
@@ -91,6 +121,7 @@ public:
     
 public:
     explicit IndexPriorityQueue(size_t capacity):
+<<<<<<< HEAD
         heap_(capacity),
         heapSize_(capacity),
         pq_(capacity),
@@ -106,10 +137,23 @@ public:
         qp_(item.size(), -1)
     {
         for(auto i = getLastNoneLeaf(); i != -1; --i)
+=======
+    heap_(capacity),
+    heapSize_(0)
+    {
+        
+    }
+    IndexPriorityQueue(const vector<Item> &item):
+        heap_(item),
+        heapSize_(item.size())
+    {
+        for(auto i = heapSize_/2 - 1; i != -1; --i)
+>>>>>>> FETCH_HEAD
         {
             sink(i);
         }
     }
+<<<<<<< HEAD
     
 public:
     void     insert(size_t index, const double &item)
@@ -122,6 +166,12 @@ public:
             heap_[index]   = item;
             swim(index);
         }
+=======
+public:
+    void     insert(size_t index, const double &item)
+    {
+        
+>>>>>>> FETCH_HEAD
     }
     void     change(size_t index, const double &item);
     void     remove(size_t index);
@@ -130,6 +180,7 @@ public:
     
     double   min() const;
     size_t   minIndex() const;
+<<<<<<< HEAD
     
     bool     empty() const
     {
@@ -145,6 +196,11 @@ public:
     {
         return qp_[index] != -1;
     }
+=======
+    bool     empty() const;
+    size_t   size() const;
+    bool     contain(size_t index) const;
+>>>>>>> FETCH_HEAD
     
     friend ostream & operator<<(ostream &out, const IndexPriorityQueue<Item, cmp> &ipq)
     {
