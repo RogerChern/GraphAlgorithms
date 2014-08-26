@@ -7,11 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		330806A919AB763000D577C0 /* EagerPrimMST.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 330806A819AB763000D577C0 /* EagerPrimMST.cpp */; };
+		3335D3A619AC456600427815 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3335D3A419AC456600427815 /* main.cpp */; };
 		336CA1C519A9E84600BBB2BA /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 336CA1C419A9E84600BBB2BA /* main.cpp */; };
 		33BCFEC419AAE2C100E3AE7F /* EdgeWeightedGraph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33BCFEC319AAE2C100E3AE7F /* EdgeWeightedGraph.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		3335D39F19AC454500427815 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		336CA1BF19A9E84600BBB2BA /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -24,6 +35,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		330806A719AB745700D577C0 /* EagerPrimMST.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EagerPrimMST.h; sourceTree = "<group>"; };
+		330806A819AB763000D577C0 /* EagerPrimMST.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EagerPrimMST.cpp; sourceTree = "<group>"; };
+		3335D39519AC2C2000427815 /* IndexPriorityQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexPriorityQueue.h; sourceTree = "<group>"; };
+		3335D3A319AC454500427815 /* MinimumSpanningTrees copy */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "MinimumSpanningTrees copy"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3335D3A419AC456600427815 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		336CA1C119A9E84600BBB2BA /* MinimumSpanningTrees */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MinimumSpanningTrees; sourceTree = BUILT_PRODUCTS_DIR; };
 		336CA1C419A9E84600BBB2BA /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		33BCFEC219AADBD600E3AE7F /* EdgeWeightedGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EdgeWeightedGraph.h; sourceTree = "<group>"; };
@@ -32,6 +48,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3335D39E19AC454500427815 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		336CA1BE19A9E84600BBB2BA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -42,9 +65,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3335D39419AC2BE900427815 /* IndexPQ */ = {
+			isa = PBXGroup;
+			children = (
+				3335D39519AC2C2000427815 /* IndexPriorityQueue.h */,
+				3335D3A419AC456600427815 /* main.cpp */,
+			);
+			name = IndexPQ;
+			sourceTree = "<group>";
+		};
 		336CA1B819A9E84600BBB2BA = {
 			isa = PBXGroup;
 			children = (
+				3335D39419AC2BE900427815 /* IndexPQ */,
 				336CA1C319A9E84600BBB2BA /* MinimumSpanningTrees */,
 				336CA1C219A9E84600BBB2BA /* Products */,
 			);
@@ -54,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				336CA1C119A9E84600BBB2BA /* MinimumSpanningTrees */,
+				3335D3A319AC454500427815 /* MinimumSpanningTrees copy */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -65,6 +99,8 @@
 				33BCFEC219AADBD600E3AE7F /* EdgeWeightedGraph.h */,
 				33BCFEC319AAE2C100E3AE7F /* EdgeWeightedGraph.cpp */,
 				33F8CE0319AB565E00151181 /* LazyPrimMST.h */,
+				330806A719AB745700D577C0 /* EagerPrimMST.h */,
+				330806A819AB763000D577C0 /* EagerPrimMST.cpp */,
 			);
 			path = MinimumSpanningTrees;
 			sourceTree = "<group>";
@@ -72,6 +108,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		3335D39819AC454500427815 /* MinimumSpanningTrees copy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3335D3A019AC454500427815 /* Build configuration list for PBXNativeTarget "MinimumSpanningTrees copy" */;
+			buildPhases = (
+				3335D39919AC454500427815 /* Sources */,
+				3335D39E19AC454500427815 /* Frameworks */,
+				3335D39F19AC454500427815 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MinimumSpanningTrees copy";
+			productName = MinimumSpanningTrees;
+			productReference = 3335D3A319AC454500427815 /* MinimumSpanningTrees copy */;
+			productType = "com.apple.product-type.tool";
+		};
 		336CA1C019A9E84600BBB2BA /* MinimumSpanningTrees */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 336CA1CA19A9E84600BBB2BA /* Build configuration list for PBXNativeTarget "MinimumSpanningTrees" */;
@@ -111,23 +164,47 @@
 			projectRoot = "";
 			targets = (
 				336CA1C019A9E84600BBB2BA /* MinimumSpanningTrees */,
+				3335D39819AC454500427815 /* MinimumSpanningTrees copy */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3335D39919AC454500427815 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3335D3A619AC456600427815 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		336CA1BD19A9E84600BBB2BA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				33BCFEC419AAE2C100E3AE7F /* EdgeWeightedGraph.cpp in Sources */,
 				336CA1C519A9E84600BBB2BA /* main.cpp in Sources */,
+				330806A919AB763000D577C0 /* EagerPrimMST.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		3335D3A119AC454500427815 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "MinimumSpanningTrees copy";
+			};
+			name = Debug;
+		};
+		3335D3A219AC454500427815 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "MinimumSpanningTrees copy";
+			};
+			name = Release;
+		};
 		336CA1C819A9E84600BBB2BA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -194,6 +271,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -215,6 +293,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3335D3A019AC454500427815 /* Build configuration list for PBXNativeTarget "MinimumSpanningTrees copy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3335D3A119AC454500427815 /* Debug */,
+				3335D3A219AC454500427815 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		336CA1BC19A9E84600BBB2BA /* Build configuration list for PBXProject "MinimumSpanningTrees" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

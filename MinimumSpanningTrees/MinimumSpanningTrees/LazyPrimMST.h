@@ -23,7 +23,7 @@ private:
     vector<bool>               marked_;
     vector<Edge>               mst_;
 private:
-    void visit(const EdgeWeightedGraph &ewg, size_t v)
+    void visit(const EdgeWeightedGraph &ewg, size_t v)//push all(ineligible included) edges into heap
     {
         marked_[v] = true;
         for(const auto &x : ewg.adj(v))
@@ -39,24 +39,23 @@ public:
     LazyPrimMST(const EdgeWeightedGraph &ewg):
     marked_(ewg.V(), false)
     {
-        marked_[0] = true;
         visit(ewg, 0);
         
         Edge temp;
         size_t x, y;
-        while(!crossEdge_.empty())
+        while(!crossEdge_.empty())//check all edges(include inenligible)
         {
             temp = std::move(crossEdge_.top());
             crossEdge_.pop();
             
             x = temp.either();
             y = temp.other(x);
-            if(marked_[x] && marked_[y])
+            if(marked_[x] && marked_[y])//it indicates the edge examed was not an optimal
             {
                 continue;
             }
-            mst_.push_back(temp);
             
+            mst_.push_back(temp);
             if(!marked_[x])
             {
                 visit(ewg, x);
