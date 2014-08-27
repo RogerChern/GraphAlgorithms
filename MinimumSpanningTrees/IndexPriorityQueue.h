@@ -56,20 +56,20 @@ private:
         return heapSize_ / 2 - 1;
     }
     
-    void   sink(size_t index)
+    void   sink(size_t prior)
     {
-        while(getLchild(index) < heapSize_)
+        while(getLchild(prior) < heapSize_)
         {
-            auto lcld = getLchild(index);
+            auto lcld = getLchild(prior);
             
             if(lcld + 1 < heapSize_ && compare(lcld + 1, lcld))
             {
                 ++lcld;
             }
-            if(compare(lcld, index))
+            if(compare(lcld, prior))
             {
-                exchange(lcld, index);
-                index = lcld;
+                exchange(lcld, prior);
+                prior = lcld;
             }
             else
             {
@@ -78,13 +78,13 @@ private:
         }
     }
 
-    void   swim(size_t v)
+    void   swim(size_t prior)
     {
-        while(v > 0 && compare(v, getParent(v)))
+        while(prior > 0 && compare(prior, getParent(prior)))
         {
-            auto parent = getParent(v);
-            exchange(v, parent);
-            v = parent;
+            auto parent = getParent(prior);
+            exchange(prior, parent);
+            prior = parent;
         }
     }
     
@@ -176,7 +176,7 @@ public:
     void     remove(size_t index)
     {
         exchange(index, --heapSize_);
-        sink(index);
+        sink(indexToPriority_[index]);
         indexToPriority_[index] = -1;
     }
     

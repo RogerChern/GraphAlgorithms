@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		330806A919AB763000D577C0 /* EagerPrimMST.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 330806A819AB763000D577C0 /* EagerPrimMST.cpp */; };
-		3335D3A619AC456600427815 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3335D3A419AC456600427815 /* main.cpp */; };
+		3338CF8D19ADCF6700527BE3 /* UnionMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3338CF8B19ADCF6700527BE3 /* UnionMain.cpp */; };
 		336CA1C519A9E84600BBB2BA /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 336CA1C419A9E84600BBB2BA /* main.cpp */; };
 		33BCFEC419AAE2C100E3AE7F /* EdgeWeightedGraph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33BCFEC319AAE2C100E3AE7F /* EdgeWeightedGraph.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		3335D39F19AC454500427815 /* CopyFiles */ = {
+		3338CF8519ADCE0400527BE3 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -38,8 +38,11 @@
 		330806A719AB745700D577C0 /* EagerPrimMST.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EagerPrimMST.h; sourceTree = "<group>"; };
 		330806A819AB763000D577C0 /* EagerPrimMST.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EagerPrimMST.cpp; sourceTree = "<group>"; };
 		3335D39519AC2C2000427815 /* IndexPriorityQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexPriorityQueue.h; sourceTree = "<group>"; };
-		3335D3A319AC454500427815 /* MinimumSpanningTrees copy */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "MinimumSpanningTrees copy"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3335D3A419AC456600427815 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		3338CF8919ADCE0400527BE3 /* UnionFind */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = UnionFind; sourceTree = BUILT_PRODUCTS_DIR; };
+		3338CF8A19ADCE4700527BE3 /* UnionFind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnionFind.h; sourceTree = "<group>"; };
+		3338CF8B19ADCF6700527BE3 /* UnionMain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UnionMain.cpp; sourceTree = "<group>"; };
+		3338CF8E19ADD61600527BE3 /* KruskalMST.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KruskalMST.h; sourceTree = "<group>"; };
 		336CA1C119A9E84600BBB2BA /* MinimumSpanningTrees */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MinimumSpanningTrees; sourceTree = BUILT_PRODUCTS_DIR; };
 		336CA1C419A9E84600BBB2BA /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		33BCFEC219AADBD600E3AE7F /* EdgeWeightedGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EdgeWeightedGraph.h; sourceTree = "<group>"; };
@@ -48,7 +51,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3335D39E19AC454500427815 /* Frameworks */ = {
+		3338CF8419ADCE0400527BE3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -74,9 +77,19 @@
 			name = IndexPQ;
 			sourceTree = "<group>";
 		};
+		3338CF7E19ADCDD800527BE3 /* UnionFind */ = {
+			isa = PBXGroup;
+			children = (
+				3338CF8A19ADCE4700527BE3 /* UnionFind.h */,
+				3338CF8B19ADCF6700527BE3 /* UnionMain.cpp */,
+			);
+			name = UnionFind;
+			sourceTree = "<group>";
+		};
 		336CA1B819A9E84600BBB2BA = {
 			isa = PBXGroup;
 			children = (
+				3338CF7E19ADCDD800527BE3 /* UnionFind */,
 				3335D39419AC2BE900427815 /* IndexPQ */,
 				336CA1C319A9E84600BBB2BA /* MinimumSpanningTrees */,
 				336CA1C219A9E84600BBB2BA /* Products */,
@@ -87,7 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				336CA1C119A9E84600BBB2BA /* MinimumSpanningTrees */,
-				3335D3A319AC454500427815 /* MinimumSpanningTrees copy */,
+				3338CF8919ADCE0400527BE3 /* UnionFind */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -101,6 +114,7 @@
 				33F8CE0319AB565E00151181 /* LazyPrimMST.h */,
 				330806A719AB745700D577C0 /* EagerPrimMST.h */,
 				330806A819AB763000D577C0 /* EagerPrimMST.cpp */,
+				3338CF8E19ADD61600527BE3 /* KruskalMST.h */,
 			);
 			path = MinimumSpanningTrees;
 			sourceTree = "<group>";
@@ -108,21 +122,21 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3335D39819AC454500427815 /* MinimumSpanningTrees copy */ = {
+		3338CF7F19ADCE0400527BE3 /* UnionFind */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3335D3A019AC454500427815 /* Build configuration list for PBXNativeTarget "MinimumSpanningTrees copy" */;
+			buildConfigurationList = 3338CF8619ADCE0400527BE3 /* Build configuration list for PBXNativeTarget "UnionFind" */;
 			buildPhases = (
-				3335D39919AC454500427815 /* Sources */,
-				3335D39E19AC454500427815 /* Frameworks */,
-				3335D39F19AC454500427815 /* CopyFiles */,
+				3338CF8019ADCE0400527BE3 /* Sources */,
+				3338CF8419ADCE0400527BE3 /* Frameworks */,
+				3338CF8519ADCE0400527BE3 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "MinimumSpanningTrees copy";
+			name = UnionFind;
 			productName = MinimumSpanningTrees;
-			productReference = 3335D3A319AC454500427815 /* MinimumSpanningTrees copy */;
+			productReference = 3338CF8919ADCE0400527BE3 /* UnionFind */;
 			productType = "com.apple.product-type.tool";
 		};
 		336CA1C019A9E84600BBB2BA /* MinimumSpanningTrees */ = {
@@ -164,17 +178,17 @@
 			projectRoot = "";
 			targets = (
 				336CA1C019A9E84600BBB2BA /* MinimumSpanningTrees */,
-				3335D39819AC454500427815 /* MinimumSpanningTrees copy */,
+				3338CF7F19ADCE0400527BE3 /* UnionFind */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		3335D39919AC454500427815 /* Sources */ = {
+		3338CF8019ADCE0400527BE3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3335D3A619AC456600427815 /* main.cpp in Sources */,
+				3338CF8D19ADCF6700527BE3 /* UnionMain.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,17 +205,17 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		3335D3A119AC454500427815 /* Debug */ = {
+		3338CF8719ADCE0400527BE3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				PRODUCT_NAME = "MinimumSpanningTrees copy";
+				PRODUCT_NAME = UnionFind;
 			};
 			name = Debug;
 		};
-		3335D3A219AC454500427815 /* Release */ = {
+		3338CF8819ADCE0400527BE3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				PRODUCT_NAME = "MinimumSpanningTrees copy";
+				PRODUCT_NAME = UnionFind;
 			};
 			name = Release;
 		};
@@ -293,11 +307,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3335D3A019AC454500427815 /* Build configuration list for PBXNativeTarget "MinimumSpanningTrees copy" */ = {
+		3338CF8619ADCE0400527BE3 /* Build configuration list for PBXNativeTarget "UnionFind" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3335D3A119AC454500427815 /* Debug */,
-				3335D3A219AC454500427815 /* Release */,
+				3338CF8719ADCE0400527BE3 /* Debug */,
+				3338CF8819ADCE0400527BE3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
