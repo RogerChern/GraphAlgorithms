@@ -18,13 +18,11 @@ int main(int argc, char **argv)
     random_device rd;
     mt19937 g(rd());
 
-    vector<double> vec{11, 10, 9 ,8 ,7 ,6, 5, 4, 3, 2, 1, 0};
-    for(size_t i = 0; i < 100; ++i)
+    vector<double> vec{11, 10, 9 ,8 ,7 ,6, 5, 4, 3, 2, 1, 0, -1, -2, -3, -4, -5, -6, -7};
+    IndexPriorityQueue<double, greater<double>> ipq(vec);
+    while(!ipq.empty())
     {
-        shuffle(vec.begin(), vec.end(), g);
-        IndexPriorityQueue<double, less<double>> ipq(vec);
-        cout << ipq.isMinPQ();
+        cout << ipq.getItem(ipq.removeMin()) << ' ';
     }
-    
     return 0;
 }

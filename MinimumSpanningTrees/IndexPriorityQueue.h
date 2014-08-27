@@ -16,14 +16,27 @@
 #include <unordered_map>
 using namespace std;
 
-template<typename Item, typename cmp = less<Item>>
+template<typename KeyType, typename cmp = less<KeyType>>
 class IndexPriorityQueue{
 private:
-    vector<Item>                    heap_;
-    size_t                          heapSize_;
-    vector<size_t>                  pq_;
-    vector<size_t>                  qp_;
+    size_t                          heapSize_;         //size of already constructed heap
+    vector<KeyType>                 indexToItem_;      //map index    -> KeyType      keys might be changed
+    vector<size_t>                  priorityToIndex_;  //map priority -> index
+    vector<size_t>                  indexToPriority_;  //map index    -> priority
+    
 private:
+    void   exchange(size_t lprior, size_t rprior)
+    {
+        swap(priorityToIndex_[lprior], priorityToIndex_[rprior]);
+        indexToPriority_[priorityToIndex_[lprior]] = lprior;
+        indexToPriority_[priorityToIndex_[rprior]] = rprior;
+    }
+    
+    bool   compare(size_t lprior, size_t rprior) const
+    {
+        return cmp()(indexToItem_[priorityToIndex_[lprior]], indexToItem_[priorityToIndex_[rprior]]);
+    }
+    
     size_t getParent(size_t child) const
     {
         return (child - 1) / 2 + 1;
@@ -45,13 +58,13 @@ private:
         {
             auto lcld = getLchild(index);
             
-            if(lcld + 1 < heapSize_ && cmp()(heap_[lcld+1], heap_[lcld]))
+            if(lcld + 1 < heapSize_ && compare(lcld + 1, lcld))
             {
                 ++lcld;
             }
-            if(cmp()(heap_[lcld], heap_[index]))
+            if(compare(lcld, index))
             {
-                swap(heap_[lcld], heap_[index]);
+                exchange(lcld, index);
                 index = lcld;
             }
             else
@@ -63,68 +76,125 @@ private:
 
     void   swim(size_t v)
     {
-        while(v > 0 && cmp()(v, getParent(v)))
+        while(v > 0 && compare(v, getParent(v)))
         {
             auto parent = getParent(v);
-            swap(heap_[v], heap_[parent]);
+            exchange(v, parent);
             v = parent;
         }
     }
     
-public: //for test only     should be undocumented
-        //for unknown reason the cmp() version of is_heap does not work
-    bool   isMaxPQ() const
-    {
-        return is_heap(heap_.begin(), heap_.end());
-    }
-    
-    bool   isMinPQ() const
-    {
-        return is_heap(heap_.begin(), heap_.end(), greater<Item>());
-    }
-    
 public:
     explicit IndexPriorityQueue(size_t capacity):
-        heap_(capacity),
-        heapSize_(capacity),
-        pq_(capacity),
-        qp_(capacity, -1)
+        indexToItem_(capacity),
+        heapSize_(0),
+        priorityToIndex_(capacity),
+        indexToPriority_(capacity, -1)
     {
         
     }
     
-    IndexPriorityQueue(const vector<Item> &item):
-        heap_(item),
+    IndexPriorityQueue(const vector<KeyType> &item):
+        indexToItem_(item),
         heapSize_(item.size()),
-        pq_(item.size()),
-        qp_(item.size(), -1)
+        priorityToIndex_(item.size()),
+        indexToPriority_(item.size(), -1)
     {
+        for(auto i = 0; i < item.size(); ++i)
+        {
+            priorityToIndex_[i] = i;
+            indexToPriority_[priorityToIndex_[i]] = i;
+        }
         for(auto i = getLastNoneLeaf(); i != -1; --i)
-
         {
             sink(i);
         }
     }
     
 public:
-    void     insert(size_t index, const double &item)
+    void     insert(size_t index, const KeyType &item)
     {
         if(!contains(index))
         {
             ++heapSize_;
-            qp_[index]     = heapSize_;
-            pq_[heapSize_] = index;
-            heap_[index]   = item;
+            indexToItem_[index]         = item;
+            indexToPriority_[index]     = heapSize_;
+            priorityToIndex_[heapSize_] = index;
             swim(index);
         }
     }
-    void     change(size_t index, const double &item);
-    void     remove(size_t index);
-    void     remove(const double &item);
-    size_t   removeMin();
+    void     insert(size_t index, KeyType &&item)
+    {
+        if(!contains(index))
+        {
+            ++heapSize_;
+            indexToItem_[index]         = std::move(item);
+            indexToPriority_[index]     = heapSize_;
+            priorityToIndex_[heapSize_] = index;
+            swim(index);
+        }
+    }
     
-    double   min() const;
-    size_t   minIndex() const;
+    // When changing the item, the heap property should be maintaind by swim(indexToPriority_[index])
+    void     changeKey(size_t index, const KeyType &item)
+    {
+        indexToItem_[index] = item;
+        swim(indexToPriority_[index]);
+        sink(indexToPriority_[index]);
+    }
+    void     changeKey(size_t index, KeyType &&item)
+    {
+        indexToItem_[index] = std::move(item);
+        swim(indexToPriority_[index]);
+        sink(indexToPriority_[index]);
+    }
+    void     decreaseKey(size_t index, const KeyType &item)
+    {
+        indexToItem_[index] = item;
+        swim(indexToPriority_[index]);
+    }
+    void     decreaseKey(size_t index, KeyType &&item)
+    {
+        indexToItem_[index] = std::move(item);
+        swim(indexToPriority_[index]);
+    }
+    void     increaseKey(size_t index, const KeyType &item)
+    {
+        indexToItem_[index] = item;
+        sink(indexToPriority_[index]);
+    }
+    void     increaseKey(size_t index, KeyType &&item)
+    {
+        indexToItem_[index] = std::move(item);
+        sink(indexToPriority_[index]);
+    }
+    
+    void     remove(size_t index)
+    {
+        exchange(index, --heapSize_);
+        sink(index);
+        indexToPriority_[index] = -1;
+    }
+    
+    //return index of Min
+    size_t   removeMin()
+    {
+        auto ret = priorityToIndex_[0];
+        exchange(0, --heapSize_);
+        sink(0);
+        indexToPriority_[ret] = -1;
+        return ret;
+    }
+    
+    KeyType  minItem() const
+    {
+        return indexToItem_[priorityToIndex_[0]];
+    }
+    
+    size_t   minIndex() const
+    {
+        return priorityToIndex_[0];
+    }
     
     bool     empty() const
     {
@@ -138,14 +208,19 @@ public:
     
     bool     contains(size_t index) const
     {
-        return qp_[index] != -1;
+        return indexToPriority_[index] != -1;
     }
     
-    friend ostream & operator<<(ostream &out, const IndexPriorityQueue<Item, cmp> &ipq)
+    KeyType  getItem(size_t index) const
     {
-        for(const auto &i : ipq.heap_)
+        return indexToItem_[index];
+    }
+    
+    friend ostream & operator<<(ostream &out, const IndexPriorityQueue<KeyType, cmp> &ipq)
+    {
+        for(const auto &i : ipq.prioriyToIndex_)
         {
-            out << i << "  ";
+            out << ipq.indexToItem_[i] << "  ";
         }
         return out;
     }
