@@ -10,6 +10,7 @@
 #define MinimumSpanningTrees_EagerPrimMST_h
 
 #include "EdgeWeightedGraph.h"
+#include "IndexPriorityQueue.h"
 #include <queue>
 using namespace std;
 
@@ -19,30 +20,45 @@ private:
     vector<Edge>                           mst_;
     vector<bool>                           marked_;
     vector<double>                         distTo_;
-    priority_queue<Edge, vector<Edge>, greater<Edge>>
-                                           crossingEdge_;
+    IndexPriorityQueue<Edge>               crossingEdge_;
+
 private:
     void visit(const EdgeWeightedGraph &ewg, size_t v)
     {
         marked_[v] = true;
         for(const auto &x : ewg.adj(v))
         {
-            if(!marked_[x.other(v)])
+            if(!marked_[x.other(v)] && x.weight() < distTo_[x.other(v)])
             {
-                if(x.weight() < distTo_[x.other(v)])
+                distTo_[x.other(v)] = x.weight();
+                if(!crossingEdge_.contains(x.other(v)))
                 {
-                    distTo_[x.other(v)] = x.weight();
+                    crossingEdge_.insert(x.other(v), x);
+                }
+                else
+                {
+                    crossingEdge_.changeKey(x.other(v), x);
                 }
             }
         }
     }
+    
 public:
     EagerPrimMST(const EdgeWeightedGraph &ewg):
         marked_(ewg.V(), false),
-        distTo_(ewg.V(), MAX)
+        distTo_(ewg.V(), MAX),
+        crossingEdge_(ewg.V())
     {
-        
+        visit(ewg, 0);
+        while(!crossingEdge_.empty())
+        {
+            auto temp = crossingEdge_.minIndex();
+            Edge e = crossingEdge_.getItem(crossingEdge_.removeMin());
+            mst_.push_back(e);
+            visit(ewg, temp);
+        }
     }
+    
 public:
     vector<Edge> edges() const
     {

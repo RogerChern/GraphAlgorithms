@@ -16,15 +16,25 @@ using namespace std;
 
 int main(int argc, const char * argv[])
 {
-    fstream fin("/Users/rogerchen/Desktop/data/tinyEWG.txt");
+    fstream fin("/Users/rogerchen/Desktop/data/mediumEWG.txt");
+
     EdgeWeightedGraph ewg(fin);
-    cout << ewg << endl;
+    cout << ewg << "\n\n";
     
     LazyPrimMST lpmst(ewg);
     for(const auto &x : lpmst.edges())
     {
         cout << x << '\n';
     }
-    cout << lpmst.weight() << endl;
+    cout << lpmst.weight() << "\n\n";
+    
+    EagerPrimMST epmst(ewg);
+    for(const auto &x : epmst.edges())
+    {
+        cout << x << '\n';
+    }
+    cout << epmst.weight() << endl;
+
+    
     return 0;
 }

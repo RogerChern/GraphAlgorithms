@@ -17,9 +17,10 @@ using namespace std;
 
 class Edge{
 private:
-    size_t         v_;
-    size_t         w_;
-    double         weight_;
+    size_t                  v_      = 0;
+    size_t                  w_      = 0 ;
+    double                  weight_ = MAX_;
+    static const double     MAX_;
 public:
     Edge(size_t v, size_t w, double weight):
         v_(v),
@@ -29,7 +30,11 @@ public:
         
     }
     
-    Edge() = default;
+    Edge()
+    {
+        
+    }
+    
 public:
     double weight() const
     {

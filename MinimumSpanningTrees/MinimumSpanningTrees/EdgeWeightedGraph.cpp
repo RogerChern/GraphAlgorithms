@@ -7,6 +7,9 @@
 //
 
 #include "EdgeWeightedGraph.h"
+#include <cfloat>
+
+const double Edge::MAX_ = DBL_MAX;
 
 bool operator<(const Edge &lhs, const Edge &rhs)
 {

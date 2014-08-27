@@ -39,6 +39,10 @@ private:
     
     size_t getParent(size_t child) const
     {
+        if(child == 0)
+        {
+            return 0;
+        }
         return (child + 1) / 2 - 1;
     }
     
@@ -120,7 +124,7 @@ public:
             indexToPriority_[index]     = heapSize_;
             priorityToIndex_[heapSize_] = index;
             ++heapSize_;
-            swim(index);
+            swim(indexToPriority_[index]);
         }
     }
     void     insert(size_t index, KeyType &&item)
@@ -131,7 +135,7 @@ public:
             indexToPriority_[index]     = heapSize_;
             priorityToIndex_[heapSize_] = index;
             ++heapSize_;
-            swim(index);
+            swim(indexToPriority_[index]);
         }
     }
     
