@@ -39,7 +39,7 @@ private:
     
     size_t getParent(size_t child) const
     {
-        return (child - 1) / 2 + 1;
+        return (child + 1) / 2 - 1;
     }
     
     size_t getLchild(size_t parent) const
@@ -116,10 +116,10 @@ public:
     {
         if(!contains(index))
         {
-            ++heapSize_;
             indexToItem_[index]         = item;
             indexToPriority_[index]     = heapSize_;
             priorityToIndex_[heapSize_] = index;
+            ++heapSize_;
             swim(index);
         }
     }
@@ -127,10 +127,10 @@ public:
     {
         if(!contains(index))
         {
-            ++heapSize_;
             indexToItem_[index]         = std::move(item);
             indexToPriority_[index]     = heapSize_;
             priorityToIndex_[heapSize_] = index;
+            ++heapSize_;
             swim(index);
         }
     }

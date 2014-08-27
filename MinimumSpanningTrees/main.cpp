@@ -10,19 +10,30 @@
 #include <vector>
 #include <iostream>
 #include <algorithm>
+#include <string>
 #include <random>
 using namespace std;
 
 int main(int argc, char **argv)
 {
-    random_device rd;
-    mt19937 g(rd());
-
-    vector<double> vec{11, 10, 9 ,8 ,7 ,6, 5, 4, 3, 2, 1, 0, -1, -2, -3, -4, -5, -6, -7};
-    IndexPriorityQueue<double, greater<double>> ipq(vec);
+    vector<string> strings = { "it", "was", "the", "best", "of", "times", "it", "was", "the", "worst" };
+    IndexPriorityQueue<string, less<string>> ipq(strings);
+    ipq.changeKey(3, "not");
     while(!ipq.empty())
     {
         cout << ipq.getItem(ipq.removeMin()) << ' ';
     }
+    cout << '\n';
+
+    for(auto i = 0; i < strings.size(); ++i)
+    {
+        ipq.insert(i, strings[i]);
+    }
+    
+    while(!ipq.empty())
+    {
+        cout << ipq.getItem(ipq.removeMin()) << ' ';
+    }
+
     return 0;
 }
