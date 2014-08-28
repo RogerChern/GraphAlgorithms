@@ -16,6 +16,7 @@ using namespace std;
 class UnionFind {
 private:
     vector<size_t>    id_;
+    vector<size_t>    size_;
     size_t            count_;
 public:
     UnionFind(size_t N):
@@ -24,18 +25,26 @@ public:
         for(auto i = 0; i < N; ++i)
         {
             id_.push_back(i);
+            size_.push_back(1);
         }
     }
     
 public:
-    size_t find(size_t v) const
+    size_t find(size_t v)
     {
-        return id_[v];
+        auto temp = v;
+        while(v != id_[v])
+        {
+            v = id_[v];
+        }
+        id_[temp]   = v;
+        size_[v]   += size_[temp];
+        return v;
     }
     
-    bool   connected(size_t v, size_t w) const
+    bool   connected(size_t v, size_t w)
     {
-        return id_[v] == id_[w];
+        return find(v) == find(w);
     }
     
     size_t count() const
@@ -45,19 +54,23 @@ public:
     
     void   unite(size_t v, size_t w)
     {
-        auto vid = id_[v];
-        auto wid = id_[w];
+        auto vid = find(v);
+        auto wid = find(w);
         
         if(vid == wid)
         {
             return;
         }
-        for(auto i = 0; i < id_.size(); ++i)
+        
+        if(size_[vid] < size_[wid])
         {
-            if(id_[i] == vid)
-            {
-                id_[i] = wid;
-            }
+            id_[vid]    = wid;
+            size_[wid] += size_[vid];
+        }
+        else
+        {
+            id_[wid]    = vid;
+            size_[vid] += size_[wid];
         }
         --count_;
     }
