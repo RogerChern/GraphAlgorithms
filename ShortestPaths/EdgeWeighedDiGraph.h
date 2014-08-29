@@ -28,6 +28,7 @@ public:
         
     }
     
+    DirectedWeighedEdge() = default;
 public:
     size_t from() const
     {
@@ -114,7 +115,11 @@ public:
     }
     
     friend ostream & operator<<(ostream &out, const EdgeWeightedDiGraph &e);
+    friend bool operator==(const DirectedWeighedEdge &, const DirectedWeighedEdge &);
+    friend bool operator!=(const DirectedWeighedEdge &, const DirectedWeighedEdge &);
 };
+bool operator==(const DirectedWeighedEdge &, const DirectedWeighedEdge &);
+bool operator!=(const DirectedWeighedEdge &, const DirectedWeighedEdge &);
 bool operator<(const DirectedWeighedEdge &lhs, const DirectedWeighedEdge &rhs);
 bool operator>(const DirectedWeighedEdge &lhs, const DirectedWeighedEdge &rhs);
 ostream & operator<<(ostream &out, const EdgeWeightedDiGraph &ewg);

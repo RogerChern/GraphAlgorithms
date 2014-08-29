@@ -7,12 +7,30 @@
 //
 
 #include <iostream>
+#include <fstream>
+#include "SingleSourceShortestPath.h"
+#include "EdgeWeighedDiGraph.h"
+using namespace std;
 
 int main(int argc, const char * argv[])
 {
-
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    fstream fin("/Users/rogerchen/Desktop/data/tinyEWD.txt");
+    EdgeWeightedDiGraph ewdg(fin);
+    
+    SingleSourceShortestPath sssp(ewdg, 0);
+    
+    for(auto i = 0; i < ewdg.V(); ++i)
+    {
+        if(sssp.hasPathTo(i))
+        {
+            cout << "0 to " << i << " :\n";
+            for(const auto &x : sssp.pathTo(i))
+            {
+                cout << "    " << x << '\n';
+            }
+            cout << "    " << sssp.distTo(i) << '\n';
+        }
+    }
     return 0;
 }
 

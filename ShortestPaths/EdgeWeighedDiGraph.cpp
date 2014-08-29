@@ -8,14 +8,26 @@
 
 #include "EdgeWeighedDiGraph.h"
 
+bool operator==(const DirectedWeighedEdge &lhs, const DirectedWeighedEdge &rhs)
+{
+    return lhs.weight() == rhs.weight() && lhs.from() == rhs.from() && lhs.to() == rhs.to();
+}
+
+bool operator!=(const DirectedWeighedEdge &lhs, const DirectedWeighedEdge &rhs)
+{
+    return !(lhs == rhs);
+}
+
 bool operator<(const DirectedWeighedEdge &lhs, const DirectedWeighedEdge &rhs)
 {
     return lhs.weight() < rhs.weight();
 }
+
 bool operator>(const DirectedWeighedEdge &lhs, const DirectedWeighedEdge &rhs)
 {
     return lhs.weight() > rhs.weight();
 }
+
 ostream & operator<<(ostream &out, const EdgeWeightedDiGraph &ewdg)
 {
     for(auto i = 0; i < ewdg.V_; ++i)
@@ -34,6 +46,6 @@ ostream & operator<<(ostream &out, const DirectedWeighedEdge &e)
     size_t x = e.from();
     size_t y = e.to();
     
-    out << x << ' ' << y << "   " << e.weight();
+    out << x << "-->" << y << "   " << e.weight();
     return out;
 }

@@ -43,9 +43,6 @@ int main(int argc, const char * argv[])
     cout << duration3.count() << endl;
     cout << double(duration2.count()) / duration1.count() << endl;
     cout << double(duration3.count()) / duration1.count() << endl;
-
-
-
     
     return 0;
 }

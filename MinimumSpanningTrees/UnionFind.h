@@ -37,8 +37,12 @@ public:
         {
             v = id_[v];
         }
-        id_[temp]   = v;
-        size_[v]   += size_[temp];
+        while(temp != id_[temp])
+        {
+            id_[temp]   = v;
+            size_[v]   += size_[temp];
+            temp        = id_[temp];
+        }
         return v;
     }
     
