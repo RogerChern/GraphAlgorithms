@@ -10,6 +10,7 @@
 		3338CF9C19ADDCD900527BE3 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3338CF9B19ADDCD900527BE3 /* main.cpp */; };
 		3338CFB019ADDD9700527BE3 /* EWDGMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3338CFAE19ADDD9700527BE3 /* EWDGMain.cpp */; };
 		3338CFB619ADF43C00527BE3 /* EdgeWeighedDiGraph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3338CFB519ADF43C00527BE3 /* EdgeWeighedDiGraph.cpp */; };
+		33C6786B19B02039007C4F2A /* EdgeWeighedDiGraph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3338CFB519ADF43C00527BE3 /* EdgeWeighedDiGraph.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,6 +41,8 @@
 		3338CFAE19ADDD9700527BE3 /* EWDGMain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EWDGMain.cpp; sourceTree = "<group>"; };
 		3338CFB119ADDE1800527BE3 /* EdgeWeighedDiGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EdgeWeighedDiGraph.h; sourceTree = "<group>"; };
 		3338CFB519ADF43C00527BE3 /* EdgeWeighedDiGraph.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EdgeWeighedDiGraph.cpp; sourceTree = "<group>"; };
+		33C6786819B00EBD007C4F2A /* SingleSourceShortestPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleSourceShortestPath.h; sourceTree = "<group>"; };
+		33C6786A19B017F3007C4F2A /* IndexPriorityQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IndexPriorityQueue.h; path = ../IndexPriorityQueue.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +85,8 @@
 			isa = PBXGroup;
 			children = (
 				3338CF9B19ADDCD900527BE3 /* main.cpp */,
+				33C6786819B00EBD007C4F2A /* SingleSourceShortestPath.h */,
+				33C6786A19B017F3007C4F2A /* IndexPriorityQueue.h */,
 			);
 			path = ShortestPaths;
 			sourceTree = "<group>";
@@ -165,6 +170,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33C6786B19B02039007C4F2A /* EdgeWeighedDiGraph.cpp in Sources */,
 				3338CF9C19ADDCD900527BE3 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,6 +304,7 @@
 				3338CFA319ADDCD900527BE3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3338CFAA19ADDD4C00527BE3 /* Build configuration list for PBXNativeTarget "EWDG" */ = {
 			isa = XCConfigurationList;
