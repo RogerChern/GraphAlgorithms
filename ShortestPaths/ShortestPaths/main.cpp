@@ -10,6 +10,7 @@
 #include <fstream>
 #include "SingleSourceShortestPath.h"
 #include "EdgeWeighedDiGraph.h"
+#include "DAGShortestPath.h"
 using namespace std;
 
 int main(int argc, const char * argv[])
@@ -17,13 +18,13 @@ int main(int argc, const char * argv[])
     fstream fin("/Users/rogerchen/Desktop/data/tinyEWD.txt");
     EdgeWeightedDiGraph ewdg(fin);
     
-    SingleSourceShortestPath sssp(ewdg, 0);
+    DAGShortestPath sssp(ewdg, 5);
     
     for(auto i = 0; i < ewdg.V(); ++i)
     {
         if(sssp.hasPathTo(i))
         {
-            cout << "0 to " << i << " :\n";
+            cout << "5 to " << i << " :\n";
             for(const auto &x : sssp.pathTo(i))
             {
                 cout << "    " << x << '\n';

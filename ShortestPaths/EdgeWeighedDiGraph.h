@@ -15,14 +15,14 @@ using namespace std;
 
 class DirectedWeighedEdge{
 private:
-    size_t v_ = 0;
-    size_t w_ = 0;
+    size_t from_ = 0;
+    size_t to_   = 0;
     double weight_ = DBL_MAX;
     
 public:
     DirectedWeighedEdge(size_t v, size_t w, double weight):
-        v_(v),
-        w_(w),
+        from_(v),
+        to_(w),
         weight_(weight)
     {
         
@@ -32,12 +32,12 @@ public:
 public:
     size_t from() const
     {
-        return v_;
+        return from_;
     }
     
     size_t to() const
     {
-        return w_;
+        return to_;
     }
     
     double weight() const

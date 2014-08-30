@@ -20,9 +20,9 @@ template<typename KeyType, typename cmp = less<KeyType>>
 class IndexPriorityQueue{
 private:
     size_t                          heapSize_;         //size of already constructed heap
-    vector<KeyType>                 indexToItem_;      //map index    -> KeyType      keys might be changed
-    vector<size_t>                  priorityToIndex_;  //map priority -> index
-    vector<size_t>                  indexToPriority_;  //map index    -> priority
+    vector<KeyType>                 indexToItem_;      //index-indexed Keytype item array
+    vector<size_t>                  priorityToIndex_;  //priority-indexed index array
+    vector<size_t>                  indexToPriority_;  //index-indexed priority array
     
 private:
     void   exchange(size_t lprior, size_t rprior)

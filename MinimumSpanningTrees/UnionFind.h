@@ -15,9 +15,9 @@ using namespace std;
 
 class UnionFind {
 private:
-    vector<size_t>    id_;
-    vector<size_t>    size_;
-    size_t            count_;
+    vector<size_t>    id_;     //index-indexed groupId array
+    vector<size_t>    size_;   //index-indexed groupSize array
+    size_t            count_;  //number of groups
 public:
     UnionFind(size_t N):
         count_(N)
