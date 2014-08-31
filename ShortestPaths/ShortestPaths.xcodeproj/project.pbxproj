@@ -35,6 +35,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3316B8EF19B2F2AA0032A5B0 /* BellmanFord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BellmanFord.h; sourceTree = "<group>"; };
 		33274D5C19B1DFEE00459065 /* DAGShortestPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAGShortestPath.h; sourceTree = "<group>"; };
 		33274D5D19B1EBB200459065 /* TopologicalSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopologicalSort.h; sourceTree = "<group>"; };
 		3338CF9819ADDCD900527BE3 /* ShortestPaths */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ShortestPaths; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,6 +92,7 @@
 				33C6786A19B017F3007C4F2A /* IndexPriorityQueue.h */,
 				33274D5C19B1DFEE00459065 /* DAGShortestPath.h */,
 				33274D5D19B1EBB200459065 /* TopologicalSort.h */,
+				3316B8EF19B2F2AA0032A5B0 /* BellmanFord.h */,
 			);
 			path = ShortestPaths;
 			sourceTree = "<group>";

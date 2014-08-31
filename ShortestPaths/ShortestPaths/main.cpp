@@ -11,20 +11,20 @@
 #include "SingleSourceShortestPath.h"
 #include "EdgeWeighedDiGraph.h"
 #include "DAGShortestPath.h"
+#include "BellmanFord.h"
 using namespace std;
 
 int main(int argc, const char * argv[])
 {
-    fstream fin("/Users/rogerchen/Desktop/data/tinyEWD.txt");
+    fstream fin("/Users/rogerchen/Desktop/data/tinyEWDn.txt");
     EdgeWeightedDiGraph ewdg(fin);
-    
-    DAGShortestPath sssp(ewdg, 5);
+    BellmanFord sssp(ewdg, 0);
     
     for(auto i = 0; i < ewdg.V(); ++i)
     {
         if(sssp.hasPathTo(i))
         {
-            cout << "5 to " << i << " :\n";
+            cout << "0 to " << i << " :\n";
             for(const auto &x : sssp.pathTo(i))
             {
                 cout << "    " << x << '\n';
