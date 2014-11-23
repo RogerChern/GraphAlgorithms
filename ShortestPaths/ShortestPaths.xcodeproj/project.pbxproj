@@ -8,9 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3338CF9C19ADDCD900527BE3 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3338CF9B19ADDCD900527BE3 /* main.cpp */; };
-		3338CFB019ADDD9700527BE3 /* EWDGMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3338CFAE19ADDD9700527BE3 /* EWDGMain.cpp */; };
-		3338CFB619ADF43C00527BE3 /* EdgeWeighedDiGraph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3338CFB519ADF43C00527BE3 /* EdgeWeighedDiGraph.cpp */; };
 		33C6786B19B02039007C4F2A /* EdgeWeighedDiGraph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3338CFB519ADF43C00527BE3 /* EdgeWeighedDiGraph.cpp */; };
+		33F86F0619BDAF29001BF584 /* EWDGMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3338CFAE19ADDD9700527BE3 /* EWDGMain.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,7 +40,7 @@
 		3338CF9819ADDCD900527BE3 /* ShortestPaths */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ShortestPaths; sourceTree = BUILT_PRODUCTS_DIR; };
 		3338CF9B19ADDCD900527BE3 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		3338CFAD19ADDD4C00527BE3 /* EWDG */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = EWDG; sourceTree = BUILT_PRODUCTS_DIR; };
-		3338CFAE19ADDD9700527BE3 /* EWDGMain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EWDGMain.cpp; sourceTree = "<group>"; };
+		3338CFAE19ADDD9700527BE3 /* EWDGMain.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c; fileEncoding = 4; path = EWDGMain.cpp; sourceTree = "<group>"; };
 		3338CFB119ADDE1800527BE3 /* EdgeWeighedDiGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EdgeWeighedDiGraph.h; sourceTree = "<group>"; };
 		3338CFB519ADF43C00527BE3 /* EdgeWeighedDiGraph.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EdgeWeighedDiGraph.cpp; sourceTree = "<group>"; };
 		33C6786819B00EBD007C4F2A /* SingleSourceShortestPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleSourceShortestPath.h; sourceTree = "<group>"; };
@@ -185,8 +184,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3338CFB619ADF43C00527BE3 /* EdgeWeighedDiGraph.cpp in Sources */,
-				3338CFB019ADDD9700527BE3 /* EWDGMain.cpp in Sources */,
+				33F86F0619BDAF29001BF584 /* EWDGMain.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,7 +195,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -210,7 +208,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -235,7 +233,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -250,7 +248,7 @@
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -280,6 +278,7 @@
 		3338CFAB19ADDD4C00527BE3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++98";
 				PRODUCT_NAME = EWDG;
 			};
 			name = Debug;
@@ -287,6 +286,7 @@
 		3338CFAC19ADDD4C00527BE3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++98";
 				PRODUCT_NAME = EWDG;
 			};
 			name = Release;

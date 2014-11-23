@@ -81,7 +81,9 @@ public:
         }
         return ret;
     }
-    
 };
 
+
+template<typename T>
+class TD;
 #endif

@@ -32,6 +32,5 @@ int main(int argc, const char * argv[])
             cout << "    " << sssp.distTo(i) << '\n';
         }
     }
-    return 0;
 }
 
