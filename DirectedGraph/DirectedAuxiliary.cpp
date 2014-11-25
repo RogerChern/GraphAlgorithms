@@ -34,16 +34,16 @@ vector<string> split(const string &raw, const string &delim)
     while(index != string::npos)
     {
         temp = raw.substr(cursor, index - cursor);
-        if(!temp.empty())//address mutli-appearance of delim
+        if(!temp.empty())//in case of mutliple appearance of delimiters
         {
-            ret.push_back(temp);//the count parameter should be 1 longer
+            ret.push_back(temp);
         }
         cursor = index + 1;
         index = raw.find_first_of(delim, cursor);
     }
     if(cursor < raw.size())
     {
-        ret.push_back(raw.substr(cursor, string::npos));//push the rest of raw string to vec
+        ret.push_back(raw.substr(cursor, string::npos));//append the rest of the raw string to vec
     }
     return std::move(ret);
 }

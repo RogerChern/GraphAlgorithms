@@ -54,7 +54,7 @@ private:
     void dfs(const DirectedGraph &dg, size_t v)
     {
         pre_.push(v);
-        for(const auto &x : dg.adj(v))
+        for(auto &&x : dg.adj(v))
         {
             if(!marked_[x])
             {

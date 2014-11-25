@@ -7,6 +7,7 @@
 //
 
 #include <iostream>
+#include <fstream>
 #include "DirectedGraph.h"
 #include "DirectedCycle.h"
 #include "DirectedFindPath.h"
@@ -18,8 +19,9 @@ using namespace std;
 
 int main(int argc, const char * argv[])
 {
+	fstream fin("/Users/rogerchen/Desktop/data/tinyDG.txt");
     cout << "Test for DirectedGraph.h\n";
-    DirectedGraph dg(cin);
+    DirectedGraph dg(fin);
     cout << dg << '\n';
     
     cout << "Test for DirectedCycle\n";
@@ -41,7 +43,7 @@ int main(int argc, const char * argv[])
     DirectedDepthFirstSearch ddfs(dg, {0, 9});
     for(auto i = 0; i < dg.V(); ++i)
     {
-        cout << boolalpha << rdsg.reachable(i) << ' ' << (rdsg.reachable(i) == ddfs.reachable(i)) << '\n';
+        cout << boolalpha << " reachable " << rdsg.reachable(i) << ' ' << " correspondness "<< (rdsg.reachable(i) == ddfs.reachable(i)) << '\n';
     }
     
     cout << "Test for DirectedDepthFirstOrder\n";

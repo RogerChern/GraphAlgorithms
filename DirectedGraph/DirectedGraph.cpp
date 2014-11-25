@@ -35,7 +35,7 @@ unsigned int DirectedGraph::V() const
 
 const vector<size_t> DirectedGraph::adj(size_t v) const
 {
-    return std::move(adjList_[v]);
+    return adjList_[v];
 }
 
 void DirectedGraph::addEdge(size_t v, size_t w)

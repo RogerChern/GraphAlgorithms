@@ -20,12 +20,12 @@ protected:
     vector<size_t>        marked_;
 public:
     DirectedSearchGraph(const DirectedGraph &dg, size_t s):
-    marked_(dg.V(), false)
+        marked_(dg.V(), false)
     {
         
     }
     DirectedSearchGraph(const DirectedGraph &dg, vector<size_t> s):
-    marked_(dg.V(), false)
+        marked_(dg.V(), false)
     {
         
     }
@@ -41,16 +41,16 @@ private:
     queue<size_t>   queue_;
 public:
     DirectedBreathFirstSearch(const DirectedGraph &dg, size_t s):
-    DirectedSearchGraph(dg, s)
+        DirectedSearchGraph(dg, s)
     {
         marked_[s] = true;
         queue_.push(s);
         bfs(dg);
     }
     DirectedBreathFirstSearch(const DirectedGraph &dg, vector<size_t> vec):
-    DirectedSearchGraph(dg, vec)
+        DirectedSearchGraph(dg, vec)
     {
-        for(const auto &i : vec)
+        for(auto &&i : vec)
         {
             if(!marked_[i])
             {
@@ -68,7 +68,7 @@ private:
         {
             temp = queue_.front();
             queue_.pop();
-            for(const auto &x : dg.adj(temp))
+            for(auto &&x : dg.adj(temp))
             {
                 if(!marked_[x])
                 {
@@ -84,13 +84,13 @@ private:
 class DirectedDepthFirstSearch: public DirectedSearchGraph{
 public:
     DirectedDepthFirstSearch(const DirectedGraph &dg, size_t s):
-    DirectedSearchGraph(dg, s)
+        DirectedSearchGraph(dg, s)
     {
         marked_[s] = true;
         dfs(dg, s);
     }
     DirectedDepthFirstSearch(const DirectedGraph &dg, vector<size_t> vec):
-    DirectedSearchGraph(dg, vec)
+        DirectedSearchGraph(dg, vec)
     {
         for(const auto &x: vec)
         {
@@ -104,7 +104,7 @@ public:
 private:
     void dfs(const DirectedGraph &dg, size_t v)
     {
-        for(const auto &x : dg.adj(v))
+        for(auto &&x : dg.adj(v))
         {
             if(!marked_[x])
             {

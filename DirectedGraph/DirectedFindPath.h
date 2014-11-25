@@ -21,8 +21,8 @@ protected:
     vector<bool>         marked_;
 public:
     DirectedFindPath(const DirectedGraph &dg, size_t s):
-    pathTo_(dg.V(), -1),
-    marked_(dg.V(), false)
+        pathTo_(dg.V(), -1),
+        marked_(dg.V(), false)
     {
         
     }
@@ -36,7 +36,7 @@ public:
             v = pathTo_[v];
         }
         ret.push_back(v);
-        return std::move(ret);
+        return ret;
     }
 };
 
@@ -44,7 +44,7 @@ class DirectedDepthFirstPath: public DirectedFindPath{
 private:
     void dfs(const DirectedGraph &dg, size_t s)
     {
-        for(const auto &x : dg.adj(s))
+        for(auto &&x : dg.adj(s))
         {
             if(!marked_[x])
             {
@@ -56,7 +56,7 @@ private:
     }
 public:
     DirectedDepthFirstPath(const DirectedGraph &dg, size_t s):
-    DirectedFindPath(dg, s)
+        DirectedFindPath(dg, s)
     {
         marked_[s] = true;
         dfs(dg, s);
@@ -75,7 +75,7 @@ private:
             temp = queue_.front();
             queue_.pop();
             
-            for(const auto &x : dg.adj(temp))
+            for(auto &&x : dg.adj(temp))
             {
                 if(!marked_[x])
                 {
@@ -88,7 +88,7 @@ private:
     }
 public:
     DirectedBreathFirstPath(const DirectedGraph &dg, size_t s):
-    DirectedFindPath(dg, s)
+        DirectedFindPath(dg, s)
     {
         marked_[s] = true;
         queue_.push(s);
