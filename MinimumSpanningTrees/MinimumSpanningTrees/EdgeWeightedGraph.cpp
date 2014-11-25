@@ -9,17 +9,6 @@
 #include "EdgeWeightedGraph.h"
 #include <cfloat>
 
-const double Edge::MAX_ = DBL_MAX;
-
-bool operator<(const Edge &lhs, const Edge &rhs)
-{
-    return lhs.weight() < rhs.weight();
-}
-
-bool operator>(const Edge &lhs, const Edge &rhs)
-{
-    return !(lhs < rhs);
-}
 
 ostream & operator<<(ostream &out, const EdgeWeightedGraph &ewg)
 {

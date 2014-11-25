@@ -16,8 +16,8 @@ using namespace std;
 
 int main(int argc, char **argv)
 {
-    vector<string> strings = { "it", "was", "the", "best", "of", "times", "it", "was", "the", "worst" };
-    IndexPriorityQueue<string, less<string>> ipq(strings);
+    vector<string> test = { "it", "was", "the", "best", "of", "times", "it", "was", "the", "worst", "of", "times" };
+    IndexPriorityQueue<string, less<string>> ipq(test);
     ipq.changeKey(3, "not");
     while(!ipq.empty())
     {
@@ -25,9 +25,9 @@ int main(int argc, char **argv)
     }
     cout << '\n';
 
-    for(auto i = 0; i < strings.size(); ++i)
+    for(auto i = 0; i < test.size(); ++i)
     {
-        ipq.insert(i, strings[i]);
+        ipq.insert(i, test[i]);
     }
     
     while(!ipq.empty())

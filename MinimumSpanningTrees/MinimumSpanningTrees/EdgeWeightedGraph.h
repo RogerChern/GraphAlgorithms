@@ -13,14 +13,15 @@
 #include <vector>
 #include <iostream>
 #include <utility>
+#include <cfloat>
 using namespace std;
 
 class Edge{
 private:
     size_t                  v_      = 0;
     size_t                  w_      = 0 ;
-    double                  weight_ = MAX_;
-    static const double     MAX_;
+    double                  weight_ = MAX;
+    static constexpr double MAX = DBL_MAX;
 public:
     Edge(size_t v, size_t w, double weight):
         v_(v),
@@ -30,10 +31,7 @@ public:
         
     }
     
-    Edge()
-    {
-        
-    }
+    Edge() = default;
     
 public:
     double weight() const
@@ -60,22 +58,33 @@ public:
             return -1;
     }
     
-    friend bool operator<(const Edge &lhs, const Edge &rhs);
-    friend bool operator>(const Edge &lhs, const Edge &rhs);
+    friend inline bool operator<(const Edge &lhs, const Edge &rhs);
+    friend inline bool operator>(const Edge &lhs, const Edge &rhs);
     friend ostream & operator<<(ostream &out, const Edge &e);
 };
 
+inline bool operator<(const Edge &lhs, const Edge &rhs)
+{
+    return lhs.weight() < rhs.weight();
+}
+
+inline bool operator>(const Edge &lhs, const Edge &rhs)
+{
+    return !(lhs < rhs);
+}
+
+
 class EdgeWeightedGraph{
 private:
-    vector<vector<Edge>>                   adjList_;
-    size_t                                 E_;
-    size_t                                 V_;
+    vector<vector<Edge>>            adjList_;
+    size_t                          E_;
+    size_t                          V_;
 public:
     void addEdge(Edge e)
     {
-        auto temp = e.either();
-        adjList_[temp].push_back(e);
-        adjList_[e.other(temp)].push_back(e);
+        auto vertex = e.either();
+        adjList_[vertex].push_back(e);
+        adjList_[e.other(vertex)].push_back(e);
     }
     
     size_t V() const
@@ -96,15 +105,16 @@ public:
     vector<Edge> edges() const
     {
         vector<Edge> ret;
-        for(const auto &i : adjList_)
+        for(auto &&i : adjList_)
         {
-            for(const auto &j : i)
+            for(auto &&j : i)
             {
                 ret.push_back(j);
             }
         }
-        return std::move(ret);
+        return ret;
     }
+    
 public:
     EdgeWeightedGraph(size_t V):
         V_(V),
@@ -115,9 +125,9 @@ public:
     
     EdgeWeightedGraph(istream &in)
     {
-        size_t temp;
-        in >> temp;
-        *this = EdgeWeightedGraph(temp);
+        size_t nvertex;
+        in >> nvertex;
+        *this = EdgeWeightedGraph(nvertex);
         in >> E_;
         
         size_t x, y;
@@ -131,8 +141,7 @@ public:
     
     friend ostream & operator<<(ostream &, const EdgeWeightedGraph &);
 };
-bool operator<(const Edge &lhs, const Edge &rhs);
-bool operator>(const Edge &lhs, const Edge &rhs);
+
 ostream & operator<<(ostream &out, const EdgeWeightedGraph &ewg);
 ostream & operator<<(ostream &out, const Edge &e);
 #endif

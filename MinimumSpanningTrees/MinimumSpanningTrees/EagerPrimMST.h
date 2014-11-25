@@ -12,11 +12,12 @@
 #include "EdgeWeightedGraph.h"
 #include "IndexPriorityQueue.h"
 #include <queue>
+#include <cfloat>
 using namespace std;
 
 class EagerPrimMST{
 private:
-    static const double                    MAX;
+    static constexpr double                MAX = DBL_MAX;
     vector<Edge>                           mst_;
     vector<bool>                           marked_;
     vector<double>                         distTo_;
@@ -46,16 +47,16 @@ private:
 public:
     EagerPrimMST(const EdgeWeightedGraph &ewg):
         marked_(ewg.V(), false),
-        distTo_(ewg.V(), MAX),
+        distTo_(ewg.V(), +MAX), //the '+' is required
         crossingEdge_(ewg.V())
     {
         visit(ewg, 0);
         while(!crossingEdge_.empty())
         {
-            auto temp = crossingEdge_.minIndex();
+            auto index = crossingEdge_.minIndex();
             Edge e = crossingEdge_.getItem(crossingEdge_.removeMin());
             mst_.push_back(e);
-            visit(ewg, temp);
+            visit(ewg, index);
         }
     }
     
