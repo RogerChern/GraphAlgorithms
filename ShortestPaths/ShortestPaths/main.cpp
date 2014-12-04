@@ -16,7 +16,8 @@ using namespace std;
 
 int main(int argc, const char * argv[])
 {
-    fstream fin("/Users/rogerchen/Desktop/data/tinyEWDn.txt");
+    //fstream fin("/Users/rogerchen/Desktop/data/tinyEWDn.txt");
+    fstream fin("testsuit");
     EdgeWeightedDiGraph ewdg(fin);
     BellmanFord sssp(ewdg, 0);
     

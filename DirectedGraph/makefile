@@ -1,4 +1,4 @@
-all : sdg dg
+all : dg
 
 sdg : SymbolMain.o SymbolDiGraph.o DirectedGraph.o DirectedAuxiliary.o
 	clang++ SymbolMain.o SymbolDiGraph.o DirectedGraph.o DirectedAuxiliary.o -o sdg.out

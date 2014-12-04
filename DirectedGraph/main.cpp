@@ -19,7 +19,7 @@ using namespace std;
 
 int main(int argc, const char * argv[])
 {
-	fstream fin("/Users/rogerchen/Desktop/data/tinyDG.txt");
+	fstream fin("testsuit");
     cout << "Test for DirectedGraph.h\n";
     DirectedGraph dg(fin);
     cout << dg << '\n';

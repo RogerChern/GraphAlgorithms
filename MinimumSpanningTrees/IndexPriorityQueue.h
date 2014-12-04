@@ -26,7 +26,7 @@ private:
     vector<size_t>      indexToPosition_;  //index -> position in heap_
     
 private:
-    void   exchange(size_t l, size_t r)
+    void exchange(size_t l, size_t r)
     {
         swap(heap_[l], heap_[r]);
         //maintain the index -> position array
@@ -34,7 +34,7 @@ private:
         indexToPosition_[heap_[r]] = r;
     }
     
-    bool   compare(size_t lprior, size_t rprior) const
+    bool compare(size_t lprior, size_t rprior) const
     {
         return cmp()(data_[heap_[lprior]], data_[heap_[rprior]]);
     }
@@ -58,7 +58,7 @@ private:
         return heapSize_ / 2 - 1;
     }
     
-    void   sink(size_t prior)
+    void sink(size_t prior)
     {
         while(getLchild(prior) < heapSize_)
         {
@@ -80,7 +80,7 @@ private:
         }
     }
 
-    void   swim(size_t prior)
+    void swim(size_t prior)
     {
         while(prior > 0 && compare(prior, getParent(prior)))
         {
