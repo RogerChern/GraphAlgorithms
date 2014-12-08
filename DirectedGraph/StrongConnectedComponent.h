@@ -22,9 +22,9 @@ private:
     size_t              count_;
 public:
     StrongConnectedComponent(const DirectedGraph &dg):
-    marked_(dg.V(), false),
-    id_(dg.V(), -1),
-    count_(0)
+        marked_(dg.V(), false),
+        id_(dg.V(), -1),
+        count_(0)
     {
         DirectedDepthFirstOrder ddfo(dg.reverse());
         stack<size_t> order = std::move(ddfo.reversePostOrder());
